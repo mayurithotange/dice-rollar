@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DICE</title>
+</head>
+<style>
+    body{
+        background-color: #333;
+    }
+    .continer{
+        height: 50vh;
+        width: 34vw;
+        background-color: pink;
+        margin: 21vh auto;
+        border-radius: 10px;
+        
+
+    }
+    .continer img {
+        height: 20vh;
+        display: flex;
+        margin: 50px auto;
+       border-radius: 50%;
+       object-fit: cover;
+
+
+    }
+    .btn-continer{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 113px;
+
+
+    }
+    .btn{
+        height: 5vh;
+        width: 10vw;
+        border-radius: 10px;
+        background-color: powderblue;
+        margin-top: auto;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="continer">
+        <img src="images/dice.jpeg" id="img">
+        <div class="btn-continer">
+            <button class="btn" onclick="roll()" id="btn">ROLL THE DICE</button>
+        </div>
+
+    </div>
+   <script>
+    function roll(){
+        let randamElement = Math.floor(Math.random() * (7-1)) + 1
+        console.log(randamElement)
+        let imgElement = document.getElementById("img")
+
+        if( randamElement == 1){
+            imgElement.src = "images/one.png"
+
+        }
+        else if ( randamElement == 2)
+        {
+            imgElement.src = "images/two.jpg"
+
+        }
+        else if ( randamElement == 3)
+        {
+            imgElement.src = "images/three.jpg"
+
+        }
+        else if ( randamElement == 4)
+        {
+            imgElement.src = "images/four.png"
+
+        }
+        else if ( randamElement == 5)
+        {
+            imgElement.src = "images/five.jpeg"
+
+        }
+        else
+        {
+            imgElement.src = "images/six.jpg"
+
+        }
+       
+
+    }
+   </script>
+</body>
+</html>
